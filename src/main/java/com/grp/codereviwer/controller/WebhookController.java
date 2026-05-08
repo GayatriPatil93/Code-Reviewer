@@ -10,6 +10,8 @@ public class WebhookController {
     public String handleWebhook(@RequestBody String payload,
                                 @RequestHeader(value = "X-GitHub-Event", required = false)String event){
 
+        System.out.println("Output");
+
         System.out.println("==== WEBHOOK RECEIVED ====");
         System.out.println("Event: " + event);
         System.out.println("Payload: " + payload);
